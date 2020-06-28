@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="container">
+  <!-- Navigation panel -->
+    <nav class="nav nav_flex_row">
+      <div class="nav__logo nav__logo_flex_row"> 
+        <img class="nav__logoimg" src="assets/l_logo.png">
+      </div>
+      <div class="nav__navigation nav__navigation_flex_row">
+        <ul class="nav__list nav__list_flex_row">
+          <li class="nav__item"><a class="nav__link nav__link_fontsize_small" routerLink="/home">Inicio</a></li>
+          <li class="nav__item"><a class="nav__link nav__link_fontsize_small" routerLink="">Obras disponiveis</a></li>
+          <li class="nav__item"><a class="nav__link nav__link_fontsize_small" routerLink="/opportunities">Oportunidades</a></li>
+          <li class="nav__item"><a class="nav__link nav__link_fontsize_small" routerLink="">Minhas compras</a></li>
+          <li class="nav__item"><a class="nav__link nav__link_fontsize_small" routerLink="/contact-form">Quero vender</a></li>
+        </ul>
+      </div>
+      <div class="nav__actions nav__actions_flex_row">
+        <div class="nav__notifications">
+          <a routerLink="/notifications"><img class="nav__img" src="assets/notifications.png"></a>
+        </div>
+        <div class="nav__wallet">
+          <a routerLink="/login"><img class="nav__img" src="assets/log.png"></a>
+        </div>
+        <div class="nav__login">
+            <a routerLink="/wallet"><img class="nav__img" src="assets/wallet.png"></a>
+        </div>
+      </div>
+    </nav>
+    <!-- Search form -->
+    <div  class="search-form" *ngIf="showSearch">
+      <input class="search-form__input" type="text" placeholder="Buscar obras">
+      <button class="search-form__button"><img class="search-form__img" src="assets/search.png"></button>
+    </div>
+  </div>
+  <!--Mobile header-->
+  <div class="mob-container">
+    <div class="mob-header">
+      <div class="mob-header__logo">
+        <img class="mob-header__logo-img" src="assets/l_logo.png">
+      </div>
+      <div class="panel__holder">
+        <div class="mob-header__search-form">
+          <input class="mob-header__input" type="text" placeholder="Buscar obras" [style.display]="searchShown?'block':'none'">
+          <button class="mob-header__button"><img class="search-form__img" src="assets/search.png" (click)="toggleSearch()"></button>
+        </div>
+        <div class="mob-header__hamburger-menu" (click)="openSideMenu()">
+          <img class="mob-header__hamburger-img" src="assets/menu.png">
+        </div>
+      </div>
+    </div>
+    <div class="side__menu_underlay" *ngIf="showMenu" [style.height]="viewHeight+'px'" (click)="closeSideMenu()"></div>
+    <div class="side__menu" [class.show-menu]="showMenu" [style.height]="viewHeight+'px'">
+      <img class="side__menu__hamburger-img" src="assets/menu.png" (click)="closeSideMenu()">
+      <ul class="side__menu_list">
+        <li class="side__menu_list__item"><a class="side__menu_list__item__link" routerLink="/home">Inicio</a></li>
+        <li class="side__menu_list__item"><a class="side__menu_list__item__link" routerLink="">Obras disponiveis</a></li>
+        <li class="side__menu_list__item"><a class="side__menu_list__item__link" routerLink="/opportunities">Oportunidades</a></li>
+        <li class="side__menu_list__item"><a class="side__menu_list__item__link" routerLink="">Minhas compras</a></li>
+        <li class="side__menu_list__item"><a class="side__menu_list__item__link" routerLink="/contact-form">Quero vender</a></li>
+      </ul>
+      <div class="side__menu__notifications">
+        <a routerLink="/notifications"><img class="nav__img" src="assets/notifications.png"></a>
+      </div>
+      <div class="side__menu__wallet">
+        <a routerLink="/login"><img class="nav__img" src="assets/log.png"></a>
+      </div>
+      <div class="side__menu__login">
+          <a routerLink="/wallet"><img class="nav__img" src="assets/wallet.png"></a>
+      </div>
+    </div>
+  </div>
+</header>

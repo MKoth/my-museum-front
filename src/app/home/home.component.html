@@ -1,0 +1,26 @@
+<div style="position: relative">
+  <banner-component></banner-component>
+  <user-info-component></user-info-component>
+</div>
+<main class="main">
+  <div class="featured">
+    <h4 class="featured__header">Obras em destaque</h4>
+    <div class="container">
+      
+      <mansory-blocks-component [order]="1" [blocks]="masonryItems"></mansory-blocks-component>
+
+      <a class="featured__link" href="">Ver mais ></a>
+    </div>
+  </div>
+          
+  <!--Purchases block-->
+  <div class="purchases">
+  <h4 class="purchases__header">Suas últimas compras</h4>
+    <div class="container">
+      <div class="purchases__holder">
+          <mansory-blocks-component [order]="2" [blocks]="masonryItems2"></mansory-blocks-component>
+
+      </div>
+    </div>
+  </div>  
+</main>

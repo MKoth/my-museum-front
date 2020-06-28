@@ -1,0 +1,210 @@
+.nav{
+    box-sizing: border-box;
+    padding: 66px 0 20px 0;
+    border-bottom: 2px solid  rgba(184, 186, 189, 0.4);
+  }
+  .nav_flex_row, .nav__list_flex_row, .nav__actions_flex_row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .nav__actions_flex_row{
+    justify-content: center;
+  }.nav_flex_row{
+    align-items: center;
+  }
+  .nav__logo{
+    background-image: url('../../../assets/logo.png');
+    width: 90px;
+    height: 50px;
+  }
+  .nav__logoimg{
+    width: 100%;
+    height: 100%;
+  }
+  .nav__list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .nav__item{
+    margin-right: 25px;
+  }
+  .nav__navigation_flex_row{
+    flex: 7;
+  }
+  .nav__link{
+    padding-bottom: 12px;
+    text-decoration: none;
+    color: rgba(82, 88, 98, 1);
+  }
+  .nav__link:hover{
+    border-bottom: 1px solid rgba(82, 88, 98, 1);
+    color: rgb(34, 36, 37);
+  }
+  .nav__img{
+    margin-right: 15px; 
+  }
+  .nav__notifications:hover, .nav__wallet:hover, .nav__login:hover{
+    cursor: pointer;
+  }
+  .nav__link_fontsize_small{
+    font-size: 14px;
+  }
+  .search-form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    
+  }
+  .search-form__input{
+    height: 30px;
+    width: 90px;
+    border: none;
+    outline: none;
+  }
+  .search-form__img{
+    height: 16px;
+  }
+  .search-form__input::placeholder{
+    color: rgba(185, 185, 185, 1);
+  }
+  .search-form__button{
+    border: none;
+    outline: none;
+    background: none;
+  }
+  .search-form__button:hover{
+    cursor: pointer;
+  }
+  .mob-container{
+    display: none;
+  }
+  .side__menu {
+    position: absolute;
+    width: 0%;
+    background: #fff;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    //display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    border-left: 1px solid #c7c7c7;
+    transition: all ease-in-out 0.3s;
+    overflow: hidden;
+  }
+  .side__menu.show-menu{
+    width: 70%;
+  }
+  .side__menu_underlay{
+    width: 100%;
+    background-color: azure;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  .side__menu_list {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  .side__menu_list__item{
+    list-style: none;
+  }
+  .side__menu_list__item__link {
+    color: black;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+  .side__menu_list__item__link:hover{
+    font-weight: bold;
+  }
+  .side__menu__hamburger-img {
+    margin-top: 60px;
+    margin-bottom: 18px;
+  }
+  .side__menu_list__item {
+    margin-bottom: 18px;
+  }
+  .side__menu__notifications {
+    margin-top: 20px;
+    border-top: 1px solid;
+    width: 30%;
+    padding-top: 33px;
+    text-align: center;
+  }
+  .side__menu__wallet {
+    margin: 15px 0px;
+  }
+  
+  @media screen and (max-width: 815px){
+    .mob-container{
+      display: block;
+    }
+    .mob-header{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      width: 100%;
+      border-bottom: 1px solid  rgba(74, 74, 75, 0.4);
+    }
+    .mob-header__logo-img{
+      width: 90px;
+    }
+    
+    .nav, .search-form{
+      display: none;
+    }
+   .mob-header__button{
+      border: none;
+      outline: none;
+      background: none;
+    }
+    .search-form__img{
+      width: 22px;
+      height: 22px;
+    }
+    .mob-header__input{
+      display: none;
+    }
+    .mob-header__input {
+      height: 30px;
+      width: 90px;
+      border: none;
+      outline: none;
+    }
+    .panel__holder{
+      width: 30%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      margin-top: 25px;
+    }
+    .mob-header__logo{
+      margin-right: 20%;
+      transform: translate(50%, 0);
+    }
+    .mob-container{
+      margin: 30px 25px 20px 25px;
+    }
+    .mob-header__search-form{
+      margin-right: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+  }

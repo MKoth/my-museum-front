@@ -1,0 +1,21 @@
+<div class="login-form">
+  <div class="login-form__logo">
+    <img class="login-form__header" src="assets/mymuseum.png">
+  </div>
+  <p class="login-form__description">Uma rede que conecta toda cadeia de artistas, galeristas e investidores de arte.</p>
+  <form class="form" [formGroup]="loginForm">
+    <mat-form-field class="form__input">
+      <input formControlName="email" matInput type="email" placeholder="E-mail">
+    </mat-form-field>
+    <mat-form-field class="form__input">
+      <input formControlName="password" matInput type="password" placeholder="Senha">
+    </mat-form-field>
+    <a class="form__link" href="">Esqueci minha senha</a>
+    <button class="form__button" [class.inactive]="!loginForm.valid" [disabled]="!loginForm.valid">Entrar</button>
+  </form>
+  <div class="account-question">
+    <p class="account-question__paragraph">Não tem conta?</p>
+    <a class="account-question__link" routerLink="/registration">Cadastre-se</a>
+  </div>
+</div>
+

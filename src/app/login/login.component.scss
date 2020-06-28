@@ -1,0 +1,91 @@
+.login-form__logo-img{
+  width: 80px;
+  height: 40px;
+}
+.login-form__header{
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin: 0;
+}
+.login-form__description{
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(82, 88, 98, 1);
+  margin-top: 6px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.form__input{
+  border: none;
+  //border-bottom: 0.5px solid rgba(82, 88, 98, 1);
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.95;
+  color: rgba(82, 88, 98, 1);
+  //margin-top: 30px;
+  box-sizing: border-box;
+  //padding-bottom: 15px;
+  outline: none;
+  width: 70%;
+}
+.form__input::placeholder{
+  color: rgba(82, 88, 98, 1);
+}
+.form__link{
+  font-size: 13px;
+  color: rgba(82, 88, 98, 1);
+  text-decoration: none;
+  text-align: right;
+  width: 70%;
+  margin-top: 20px;
+}
+.form__button{
+  width: 150px;
+  box-sizing: border-box;
+  padding: 12px 12px;
+  margin-bottom: 20px;
+  background-color: rgba(82, 88, 98, 1);
+  color: rgba(255, 218, 159, 1);
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.form__button.inactive{
+  color: #525862;
+  border: 1px solid #525862;
+  background: none;
+}
+.form__button:hover{
+  cursor: pointer;
+}
+.account-question{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.account-question__paragraph{
+  margin: 0;
+  color: rgba(82, 88, 98, 1);
+  margin-right: 20px;
+  font-size: 14px;
+}
+.account-question__link{
+  text-decoration: none;
+  color: rgba(82, 88, 98, 1);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 815px){
+  .form{
+    margin-left: 15px;
+  }
+  .form__input, .form__link{
+    width: 90%;
+  }
+  .form__button{
+    margin: 40px 0 10px -15px; 
+  }
+}

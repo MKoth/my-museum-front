@@ -1,0 +1,127 @@
+.user-section{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+  }
+  .user-info{
+    background-color: rgba(82, 88, 98, 1);
+    width: 70%;
+    box-sizing: border-box;
+    padding: 25px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .user-info__img{
+    height: 60px;
+    box-sizing: border-box;
+    padding: 2px;
+    border: 1px solid rgba(173, 173, 173, 1);
+    border-radius: 5px;
+    margin-right: 30px;
+  }
+  .user-info__balance{
+    margin-right: 10px;
+  }
+  .user-info__name{
+    font-size: 26px;
+    color: rgba(255, 218, 159, 1);
+    font-weight: bold;
+    margin: 0 0 12px;
+    letter-spacing: 4px;
+  }
+  .user-info__desription, .user-info__paragraph_name{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 0 12px;
+    letter-spacing: 2px;
+  }
+  .user-info__edit-link{
+    font-size: 14px;
+    color: rgba(173, 173, 173, 1);
+    font-weight: 100;
+    font-style: normal;
+  }
+  .user-info__paragraph_value{
+    font-size: 20px;
+    color: rgba(255, 218, 159, 1);
+    margin: 0;
+  }
+  .user-info__button{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(82, 88, 98, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .user-info__button:hover{
+    cursor: pointer;
+  }
+  
+  .header{
+    position: relative;
+  }
+  .user-info__holder, .balance-holder{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .mob-header{
+    display: none;
+  }
+
+  @media screen and (max-width: 1230px) {
+    .user-info__button,
+    .user-info__desription, .user-info__paragraph_name {
+      font-size: 12px;
+    }
+    .user-info__desription{
+      font-size: 16px;
+    }
+    .user-info__name{
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 950px){
+    .user-info{
+      width: 85%;
+    }
+  }
+
+  @media screen and (max-width: 815px){
+    .user-info{
+        width: 100%;
+        padding: 10px;
+      }
+      .user-section{
+        position: relative;
+      }
+      .balance-holder{
+        flex-direction: column;
+      }
+      .user-info__balance{
+        margin-bottom: 6px;
+      }
+      .user-info__paragraph_name{
+        margin-bottom: 4px;
+      }
+      .user-info__button, .user-info__desription, 
+      .user-info__paragraph_name, .user-info__edit-link{
+        font-size: 8px;
+      }
+      .user-info__paragraph_value{
+        font-size: 10px;
+      }
+      .user-info__name{
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+      .user-info__desription{
+        margin-bottom: 0;
+      }
+  }

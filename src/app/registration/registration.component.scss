@@ -1,0 +1,257 @@
+.registration-form__header{
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 0;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.form__input{
+  border: none;
+  //border-bottom: 0.5px solid rgba(82, 88, 98, 1);
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.95;
+  color: rgba(82, 88, 98, 1);
+  //margin-top: 30px;
+  box-sizing: border-box;
+  //padding-bottom: 15px;
+  outline: none;
+  width: 70%;
+}
+.form__input::placeholder{
+  color: rgba(82, 88, 98, 1);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.form__button{
+  width: 150px;
+  box-sizing: border-box;
+  padding: 12px 12px;
+  margin-bottom: 15px;
+  background-color: white;
+  opacity: 0.95;
+  color: rgba(82, 88, 98, 1);
+  font-size: 14px;
+  border: 1px solid rgba(82, 88, 98, 1);
+  border-radius: 5px;
+  margin-top: 91px;
+}
+.form__button.form__button_active{
+  //width: 150px;
+  //box-sizing: border-box;
+  //padding: 12px 12px;
+  //margin-bottom: 35px;
+  background-color: rgba(82, 88, 98, 1);
+  color: rgba(255, 218, 159, 1);
+  //font-size: 14px;
+  //border: none;
+  //border-radius: 2px;
+  //margin-top: 75px;
+  cursor: pointer;
+}
+.account-question{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.account-question__paragraph{
+  margin: 0;
+  color: rgba(82, 88, 98, 1);
+  margin-right: 20px;
+  font-size: 14px;
+}
+.account-question__link{
+  color: rgba(82, 88, 98, 1);
+  font-weight: bold;
+  font-size: 14px;
+}
+.registration-form__button{
+  background-color: white;
+  color: #525862;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.registration-form__button-holder{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  justify-content: flex-end;
+  margin-right: 30%;
+}
+.registration-form__description{
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(82, 88, 98, 1);
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+.form__button_second-page{
+  margin: 0 0 15px 0;
+}
+.form__button_personal-data{
+  margin: 0 0 15px 0;
+}
+.registration-form__success-header,  .registration-form__confirm-header {
+  font-size: 18px;
+  margin: 0;
+}
+.registration-form__success-paragraph, .registration-form__link-message-paragraph{
+  margin: 20px 0 0 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.registration-form__message-block{
+  margin-top: 100px;
+}
+.registration-form__link-message{
+  margin-top: 100px;
+}
+.registration-form__link-message-button{
+  margin-top: 85px;
+}
+.registration-form__confirm-header{
+  margin-top: 150px;
+}
+.wallet-block-holder, .document-info-holder, .selfie-block-holder{
+  border: 1px solid rgba(82, 88, 98, 1);
+  border-radius: 4px;
+  width: 80%;
+}
+.wallet-block, .document-info, .selfie-block{
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.wallet-block__point{
+  font-size: 13px;
+}
+.registration-form__wallet-paragraph{
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.wallet-block__img{
+  width: 40px;
+  height: 40px;
+}
+.wallet-block__point-list{
+  width: 60%;
+  margin-left: 25px;
+}
+.document-info__paragraph-holder, .selfie-block__paragraph-holder{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+.document-info__paragraph, .selfie-block__paragraph{
+  margin: 3px 0;
+}
+.document-info, .selfie-block{
+  margin: 40px 0;
+}
+.registration-form__document-header, .registration-form__selfie-header{
+  margin: 5px 0;
+}
+.registration-form__paragraph{
+  margin: 5px 0;
+}
+.document-info-holder{
+  width: 70%;
+}
+.registration-form__button-holder_info{
+  margin-top: 19px;
+}
+.form__button_info{
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+.document-info__link, .selfie-block__link{
+  color:  rgba(82, 88, 98, 1);
+  font-weight: bold;
+
+}
+.registration-form__success-header_light{
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.full-success-holder{
+  margin: 100px 0 60px 0;
+}
+.registration-form__full-success-button{
+  margin-top: 44px;
+}
+
+@media screen and (max-width: 815px){
+  .form{
+    margin-left: 15px;
+  }
+  .form__input{
+    width: 90%;
+    //margin-top: 60px;
+  }
+  .form__button{
+    margin: 30px 0 25px 0px; 
+  }
+  .form__button-email{
+    margin: 121px 0 25px 0px;
+  }
+  .registration-form__button-holder{
+    margin-right: 10%;
+  }
+  .registration-form__header{
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .form__input_second-page{
+    //margin-top: 20px;
+  }
+  .form__button_second-page{
+    //margin-top: 20px;
+  }
+  .form__input_personal-data{
+    //margin-top: 25px;
+  }
+  .form__button_personal-data{
+    //margin-top: 15px;
+  }
+  .registration-form__message-block, .registration-form__confirm-header{
+    text-align: center;
+  }
+  .registration-form__success-header, .registration-form__confirm-header{
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .registration-form__success-paragraph{
+    font-size: 14px;
+  }
+  .registration-form__link-message-paragraph{
+    text-align: center;
+  }
+  .registration-form__link-message-button{
+    margin-top: 120px;
+  }
+  .wallet-block-holder, .document-info-holder, .selfie-block-holder{
+    width: 100%;
+    
+  }
+  .registration-form__wallet-paragraph{
+    margin: 5px 0;
+  }
+  .registration-form__success-header_light{
+    font-size: 22px;
+    text-align: center;
+  }
+  .full-success-holder{
+    margin-bottom: 40px;
+  }
+}

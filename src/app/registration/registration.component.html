@@ -1,0 +1,209 @@
+<div class="registration-form registration-form_personal-data" *ngIf="step==1">
+  <h2 class="registration-form__header">Informe seus dados</h2>
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="next()">
+    <mat-form-field class="form__input form__input_personal-data">
+        <input formControlName="name" matInput type="text" placeholder="Nome completo">
+    </mat-form-field>
+    <mat-form-field class="form__input form__input_personal-data">
+        <input formControlName="cpf" matInput type="text" placeholder="CPF">
+    </mat-form-field>
+    <mat-form-field class="form__input form__input_personal-data">
+        <input matInput formControlName="endereco" type="text" placeholder="Endereco">
+    </mat-form-field>
+    <div class="registration-form__button-holder">
+    </div>
+    <button class="form__button form__button_personal-data" [class.form__button_active]="registerForm.valid" dis="!registerForm.valid">Continuar</button>
+  </form>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class="registration-form"  *ngIf="step==2">
+  <h2 class="registration-form__header">Vamos precisar do seu e-mail</h2>
+  <form class="form" [formGroup]="emailForm" (ngSubmit)="next()">
+    <mat-form-field class="form__input">
+      <input matInput type="email" placeholder="Digite seu e-mail" formControlName="email">
+    </mat-form-field>
+    
+    <div class="registration-form__button-holder">
+      <button class="registration-form__button" (click)="prev()"> < </button>
+      <span class="registration-form__page-num">2/5</span>
+    </div>
+    <button class="form__button form__button-email" [class.form__button_active]="emailForm.valid" dis="!emailForm.valid">Continuar</button>
+  </form>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class=" registration-form registration-form_second-page" *ngIf="step==3">
+  <h2 class="registration-form__header">Escolha uma senha</h2>
+  <p class="registration-form__description">Sua senha deve ter no mínimo xx digitos</p>
+  <form class="form" [formGroup]="passwordForm" (ngSubmit)="next()">
+    <mat-form-field class="form__input">
+        <input matInput type="password" placeholder="Senha" formControlName="password">
+    </mat-form-field>
+    <mat-form-field class="form__input">
+        <input matInput type="password" placeholder="Confirmar senha" formControlName="confirm">
+    </mat-form-field>
+    <div class="registration-form__button-holder">
+      <button class="registration-form__button" (click)="prev()"> < </button>
+      <span class="registration-form__page-num">3/5</span>
+    </div>
+    <button class="form__button form__button_second-page" [class.form__button_active]="passwordForm.valid" dis="!passwordForm.valid">Continuar</button>
+  </form>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class="registration-form registration-form_success-page" style="display: none">
+  <div class="registration-form__message-block">
+    <h4 class="registration-form__success-header">Conta criada  com sucesso</h4>
+    <p class="registration-form__success-paragraph">Acesse o link  de confirmação, enviado para o seu email</p>
+  </div>
+</div>
+<div class="registration-form registration-form__link-sending" style="display: none">
+  <div class="registration-form__link-message">
+    <p class="registration-form__link-message-paragraph">Link expirado, por favor refaça o cadastro</p>
+  </div>
+  <button class="registration-form__link-message-button form__button_active">Entrar</button>
+</div>
+<div class="registration-form registration-form__confirm-block" style="display: none">
+  <h4 class="registration-form__confirm-header">Cadastro confirmado!</h4>
+</div>
+<div class="registration-form registration-form__wallet-block" style="display: none">
+  <h2 class=" registration-form__wallet-header registration-form__header">Criar carteira</h2>
+  <p class="registration-form__wallet-paragraph">Importe sua carteira</p>
+  <div class="wallet-block-holder">
+    <div class="wallet-block">
+      <img src="assets/wallet1.png" class="wallet-block__img">
+      <ol class="wallet-block__point-list">
+        <li class="wallet-block__point">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li class="wallet-block__point">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li class="wallet-block__point">Tristique risus nec feugiat in fermentum posuere.</li>
+      </ol>
+    </div>
+  </div>
+  
+  <p class="registration-form__wallet-paragraph">Gostaria de exportar sua carteira</p>
+  <div class="wallet-block-holder">
+    <div class="wallet-block">
+      <img src="assets/wallet1.png" class="wallet-block__img">
+      <ol class="wallet-block__point-list">
+        <li class="wallet-block__point">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li class="wallet-block__point">Lorem ipsum dolor sit amet, consectetur adipiscing elit </li>
+        <li class="wallet-block__point">Tristique risus nec feugiat in fermentum posuere.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="registration-form registration-form__document_second-part" *ngIf="step==4">
+  <h2 class="registration-form__document-header">Documento</h2>
+  <p class="registration-form__paragraph">Envie-nos a imagem de um documento seu com foto</p>
+  <div class="document-info-holder" (click)="file.click()" (change)="handleInputChange($event)">
+    <input type="file" accept="image/*" #file style="display:none">
+    <div class="document-info">
+      <img *ngIf="!image_loaded" class="document-info__img" src="assets/personal-info.png">
+      <img *ngIf="image_loaded" class="document-info__img" [src]="imageSrc" style="height:50px">
+      <div class="document-info__paragraph-holder">
+        <a href="" class="document-info__link" (click)="$event.preventDefault()">Clique aqui</a>
+        <p class="document-info__paragraph">seu documento foi aceito</p>
+      </div>
+    </div>
+  </div>
+  <div class="registration-form__button-holder registration-form__button-holder_info">
+    <button class="registration-form__button" (click)="prev()"> < </button>
+    <span class="registration-form__page-num">4/5</span>
+  </div>
+  <button class="form__button form__button_info" [class.form__button_active]="image_loaded" (click)="next()" dis="!image_loaded">Continuar</button>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class="registration-form registration-form__document" *ngIf="step==5">
+  <h2 class="registration-form__document-header">Documento</h2>
+  <p class="registration-form__paragraph">Envie-nos a imagem de um documento seu com foto</p>
+  <div class="document-info-holder">
+      <div class="document-info">
+        <img class="document-info__img" src="assets/check.png">
+        <div class="document-info__paragraph-holder">
+          <p class="document-info__paragraph">Pronto!</p>
+          <p class="document-info__paragraph">Seu documento foi aceito</p>
+        </div>
+      </div>
+  </div>
+  <div class="registration-form__button-holder registration-form__button-holder_info">
+    <button class="registration-form__button" (click)="prev()"> < </button>
+    <span class="registration-form__page-num">4/5</span>
+  </div>
+  <button class="form__button form__button_info form__button_active" (click)="next()">Continuar</button>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class="registration-form registration-form__selfie_second-part" *ngIf="step==6">
+  <h2 class="registration-form__selfie-header">Selfie</h2>
+  <p class="registration-form__paragraph">Agora precisamos que nos envie uma selfie</p>
+  <div class="selfie-block-holder" (click)="file.click()" (change)="handleSelfieChange($event)">
+      <div class="selfie-block">
+        <img *ngIf="!selfie_loaded" class="selfie-block__img" src="assets/selfie.png">
+        <img *ngIf="selfie_loaded" class="document-info__img" [src]="selfieSrc" style="height:50px">
+        <div class="selfie-block__paragraph-holder">
+            <a href="" class="selfie-block__link">Clique aqui</a>
+            <p class="document-info__paragraph">para anviar sua foto</p>
+        </div>
+      </div>
+      <input type="file" accept="image/*" #file style="display:none" capture="environment">
+  </div>
+  <div class="registration-form__button-holder registration-form__button-holder_info">
+    <button class="registration-form__button" (click)="prev()"> < </button>
+    <span class="registration-form__page-num">5/5</span>
+  </div>
+  <button class="form__button form__button_info" [class.form__button_active]="selfie_loaded" (click)="next()" dis="!selfie_loaded">Continuar</button>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class="registration-form registration-form__selfie" *ngIf="step==7">
+  <h2 class="registration-form__selfie-header">Selfie</h2>
+  <p class="registration-form__paragraph">Agora precisamos que nos envie uma selfie</p>
+  <div class="selfie-block-holder">
+      <div class="selfie-block">
+        <img class="selfie-block__img" src="assets/check.png">
+        <div class="selfie-block__paragraph-holder">
+          <p class="selfie-block__paragraph">Pronto!</p>
+          <p class="selfie-block__paragraph">Sua foto ja esta conosco.</p>
+        </div>
+      </div>
+  </div>
+  <div class="registration-form__button-holder registration-form__button-holder_info">
+    <button class="registration-form__button" (click)="prev()"> < </button>
+    <span class="registration-form__page-num">5/5</span>
+  </div>
+  <button class="form__button form__button_active form__button_info" (click)="next()">Continuar</button>
+  <div class="account-question">
+    <p class="account-question__paragraph">Já tem conta?</p>
+    <a class="account-question__link" routerLink="/login">Entrar</a>
+  </div>
+</div>
+
+<div class="registration-form registration-form_full-success-page" *ngIf="step==8">
+  <div class="full-success-holder">
+    <h4 class="registration-form__success-header registration-form__success-header_light">Cadastro realizado com sucesso.</h4>
+    <h4 class="registration-form__success-header registration-form__success-header_light">Agora é só encher sua vida de arte!</h4>
+  </div>
+  
+  <button class="form__button registration-form__full-success-button form__button_active">Entrar</button>
+</div>

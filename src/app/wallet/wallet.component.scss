@@ -1,0 +1,196 @@
+.wallet-holder{
+  background-color: rgba(255, 255, 255, 1);
+  min-height: calc(100vh - 138px);
+}
+.header-section-holder{
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 0.5px solid rgb(156, 153, 153);
+}
+.header-section-holder__empty-part{
+  width: 20%;
+  border-right: 0.5px solid rgb(156, 153, 153);
+}
+.header-section-holder__header-part{
+  width: 80%;
+}
+.header-section-holder__header{
+  font-size: 20px;
+  color: rgba(82, 88, 98, 1);
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 100px 0px 30px 50px;
+}
+.content-holder{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.content-holder__empty-part{
+  width: 20%;
+  border-right: 0.5px solid rgb(156, 153, 153);
+}
+.content-holder__content-part{
+  width: 80%;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+.wallet-item{
+  margin-left: 50px;
+  margin-top: 20px;
+  border-bottom: 0.2px solid rgba(82, 88, 98, 1);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.wallet-item__credit {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+}
+.wallet-item__header, .wallet-item__paragraph{
+  margin: 14px;
+}
+.wallet-link-holder{
+  width: 20%;
+  text-align: right;
+}
+.wallet-item__credit, .wallet-item__hash{
+  width: 40%;
+}
+.empty-block-holder{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.empty-block-holder_small-part{
+  width: 20%;
+  border-right: 0.5px solid rgb(156, 153, 153); 
+  height: 100px;
+}
+.empty-block-holder_large-part{
+  width: 80%;
+}
+.wallet-item__header{
+  color: rgba(185, 185, 185, 1);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+.wallet-item__paragraph{
+  color: rgba(82, 88, 98, 1);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.wallet-link-hoder__link{
+  color: rgba(82, 88, 98, 1);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.wallet__button{
+  width: 130px;
+  box-sizing: border-box;
+  padding: 12px 12px;
+  margin-bottom: 34px;
+  background-color: rgba(82, 88, 98, 1);
+  color: rgba(255, 218, 159, 1);
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+}
+.wallet__button_pink{
+  background-color: rgba(255, 218, 159, 1);
+  color: rgba(82, 88, 98, 1);
+  width: 200px;
+}
+.buttons-group{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+.header-section-holder__header-button{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.buttons-group__button-holder{
+  margin-bottom: -15px;
+  margin-left: 15px;
+}
+@media screen and (max-width: 1024px){
+  .wallet-item__credit{
+    width: 20%;
+  }
+  .wallet-item__hash{
+    width: 40%;
+  }
+  .wallet-link-holder{
+    width: 10%;
+  }
+}
+@media screen and (max-width: 815px){
+  .header-section-holder__empty-part, .content-holder__empty-part{
+    width: 10%;
+  }
+  .header-section-holder__header-part,.content-holder__content-part{
+    width: 90%;
+  }
+  .wallet__button{
+    width: 155px;
+  }
+  .wallet__button_pink{
+    width: 165px;
+  }
+  .container{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .header-section-holder__header-button{
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons-group{
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid rgb(156, 153, 153);
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+  .header-section-holder__header{
+    margin: 10px;
+  }
+  .buttons-group__button-holder, .wallet-item{
+    margin-left: 10px;
+  }
+  .wallet-item {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+  .wallet-item__header, .wallet-item__paragraph{
+    margin-left: 0;
+  }
+  .content-holder__content-part{
+    padding-top: 0;
+  }
+  .wallet-item__credit{
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .wallet-item__paragraph{
+    margin-right: 50px;
+  }
+  .wallet-link-holder{
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+  }
+  .empty-block-holder{
+    display: none;
+  }
+}

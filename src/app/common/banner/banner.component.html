@@ -1,0 +1,26 @@
+<!-- Slider -->
+<div class="carousel">
+    <div class="carousel__info-holder">
+        <h3 class="carousel__info-holder_header">{{current.title}}</h3>
+        <p class="carousel__info-holder_price">R$ {{current.price}} / quota</p>
+        <a routerLink="/product/5" class="carousel__info-holder_reference">Ver detalhes da obra ></a>
+    </div>
+
+    <div class="carousel__slider-switcher">
+        <div 
+            class="carousel__slider-switcher_item"
+            *ngFor="let image of images; let i = index" 
+            [class.active]="i==index"
+            (click)="switchImg(i)"
+        ></div>
+    </div>
+        
+    <div class="carousel__img carousel__img_small-part" [style.opacity]="opacity">
+        <img class="carousel__img_side-picture" src="assets/{{current.url}}"/>
+    </div>
+    <div 
+        class="carousel__img carousel__img_large-part" 
+        [style.backgroundImage]="'url(../../../assets/'+current.url+')'"
+        [style.opacity]="opacity"
+    ></div>
+</div>

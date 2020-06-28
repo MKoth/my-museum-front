@@ -1,0 +1,88 @@
+    <div class="product">
+        <div class="product__header-holder product__header-holder_hidden">
+          <p class="product__paint-paragraph">Pintura</p>
+          <div class="symbols-section">
+            <a class="symbols-section__link" [class.active]="data.isShared" (click)="toggleShare($event)">
+              <!--<img class="symbols-section__image" src="assets/share.png">-->
+              <mat-icon>share</mat-icon>
+            </a>
+            <a class="symbols-section__link" [class.active]="data.isFavorite" (click)="toggleFavorite($event)">
+              <!--<img class="symbols-section__image" src="assets/like.png">-->
+              <mat-icon>favorite</mat-icon>
+            </a>
+          </div>
+        </div>
+        <div class="header-holder header-holder_hidden">
+          <h2 class="product__header">{{data.title1}}</h2>
+          <h2 class="product__header">{{data.title2}}</h2>
+        </div>
+      <div class="product-image-holder">
+        <div class="product-image-button-holder" style="position: relative">
+          <button class="product__button" (click)="prevSlide()"> < </button>
+          <div class="img-magnifier-glass" [style.display]="displayMagnifyer?'block':'none'" id="magnifier-glass" [style.backgroundImage]="'url(\'assets/'+data.images[selectedIndex]+'\')'" (click)="openDialog(data.images[selectedIndex])" (mouseleave)="displayMagnifyer=false"></div>
+          <img (click)="openDialog(data.images[selectedIndex])" id="product-image" class="product__image" [src]="'assets/'+data.images[selectedIndex]" (mouseenter)="displayMagnifyer=true">
+          <button class="product__button" (click)="nextSlide()"> > </button>
+        </div>
+        <div class="paint-views-carousel">
+          <button class="paint-views-carousel__button" (click)="prevSlideSet()"> < </button>
+
+          <img *ngFor="let image of slideSet" class="paint-views-carousel__image" [src]="'assets/'+image" (click)="setSlide(image)">
+          
+          <button class="paint-views-carousel__button" (click)="nextSlideSet()"> > </button>
+        </div>
+      </div>
+      <div class="product__information">
+        <div class="product__header-holder">
+          <p class="product__paint-paragraph">Pintura</p>
+          <div class="symbols-section">
+            <a class="symbols-section__link" [class.active]="data.isShared" (click)="toggleShare($event)">
+            <!--<img class="symbols-section__image" src="assets/share.png">-->
+            <mat-icon>share</mat-icon>
+            </a>
+            <a class="symbols-section__link" [class.active]="data.isFavorite" (click)="toggleFavorite($event)">
+            <!--<img class="symbols-section__image" src="assets/like.png">-->
+            <mat-icon>favorite</mat-icon>
+            </a>
+          </div>
+        </div>
+        <div class="header-holder">
+          <h2 class="product__header">{{data.title1}}</h2>
+          <h2 class="product__header">{{data.title2}}</h2>
+        </div>
+        <div class="quota-container">
+          <div class="quota-holder">
+              <h5 class="quota-holder__header">Preço</h5>
+              <h1 class="quota-holder__price">R$ 23 / quota</h1>
+              <p class="quota-holder__paragraph">23 mym/quota</p>
+            </div>
+            <div class="quota-holder">
+              <h5 class="quota-holder__header">Valor de venda esperado</h5>
+              <h1 class="quota-holder__price">$ 4.890 /quota</h1>
+              <p class="quota-holder__paragraph">49,80 /quota</p>
+            </div>
+        </div>
+        
+        <div class="quantity">
+          <div class="quantity__paragraph-holder">
+            <p class="quantity__paragraph">Quantidade disponível</p>
+            <p class="quantity__paragraph">{{backendQuotas}} of 100 quotas</p>
+          </div>
+          <div class="quantity__range">
+            <div class="quantity__range_percent" [style.width]="backendQuotas+'%'">
+              <span class="quantity__percentage">{{backendQuotas}}%</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="counter-button-holder">
+          <div class="quotas-holder">
+            <p class="quotas-holder__paragraph">Quotas</p>
+            <button class=" quotas-holder__count-button" (click)="removeQuotas()">-</button>
+            <span class="quota-holder__num"> {{quotas}} </span>
+            <button class=" quotas-holder__count-button quotas-holder__count-button_active" (click)="addQuotas()">+</button>
+          </div>
+          <button class="counter-button-holder__button" (click)="openQuotasDialog()">Comprar</button>
+  
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,126 @@
+.background{
+  background-image: url('../../../assets/background_l.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+}
+.holder{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 95%;
+  margin-left: 5%;
+}
+.header{
+  height: 80px;
+  border-bottom: 1px solid rgba(112, 112, 112, 1);
+  width: 95%;
+  margin-left: 5%;
+}
+.header__img{
+  width: 80px;
+  height: 60px;
+  margin-top: 20px;
+}
+.container{
+  background-image: url('../../../assets/background_s.png');
+  background-repeat: no-repeat;
+  
+  width: 80%;
+  min-height: calc(100vh - 81px);
+}
+.side-bar{
+  width: 20%;
+  border-right: 1px solid rgba(112, 112, 112, 1);
+}
+.side-bar__quote-header{
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+.side-bar__quote-header::before { 
+  content: open-quote;
+  color: rgba(255, 218, 159, 1);
+  font-size: 75px;
+  display: block;
+  margin-bottom: -25px;
+}
+.side-bar__quote-header::after { 
+  content: close-quote;
+  color: rgba(255, 218, 159, 1);
+  font-size: 20px;
+}
+.side-bar__quote-author{
+  color: rgba(255, 218, 159, 1);
+  margin-top: 80px;
+  font-size: 14px;
+}
+.side-bar__quote{
+  border-bottom: 1px solid rgba(112, 112, 112, 1);
+}
+.side-bar__language-change-link{
+  color: rgba(255, 255, 255, 1);
+  font-size: 12px;
+  text-decoration: none;
+}
+.side-bar__language-change{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50%;
+}
+.side-bar__language-change-link_active{
+  font-weight: bold;
+}
+.container__form{
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.95;
+  width: 75%;
+  height: 400px;
+  margin-left: 25%;
+  margin-top: 100px;
+  box-sizing: border-box;
+  padding: 40px 0 40px 70px;
+}
+.header{
+  margin-right: 0;
+}
+.link-holder-mobile{
+  display: none;
+}
+@media screen and (max-width: 815px){
+  .side-bar{
+    display: none;
+  }
+  .container{
+    background-image: none;
+    width: 100%;
+  }
+  .header{
+    border-bottom: none;
+  }
+  .header__logo{
+    text-align: center;
+  }
+  .container__form{
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 25px 20px 15px;
+    margin-top: 90px;
+  }
+  .holder{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .link-holder-mobile{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .side-bar__language-change-link{
+    margin-right: 20px;
+  }
+}

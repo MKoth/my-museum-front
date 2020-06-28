@@ -1,0 +1,65 @@
+.featured__img, .purchases__img{
+    width: 100%;
+}
+.featured__img-container, .purchases__img-container{
+    //width: 33%;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.featured__img-container:hover .overlay__window{
+    bottom: 0;
+}
+.overlay__window__img-paragraph{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+  }
+  .overlay__window__quote{
+    margin-top: 15px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    border-top: 1px solid rgba(82, 88, 98, 1);
+  }
+  .overlay__window__quote-link{
+    color: rgba(82, 88, 98, 1);
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .overlay__window__quote-link_span{
+    margin-right: 15px;
+  }
+  .overlay__window{
+    background-color: rgba(255, 218, 159, 1);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0 15px 25px;
+    position: absolute;
+    bottom: -200px;
+    transition: ease 1s;
+  }
+
+@media screen and (max-width: 815px){
+    .featured__img-container, .purchases__img-container{
+        margin-right: 4px;
+    }
+    .overlay__window{
+        padding: 8px 0 8px 8px;
+        font-size: 10px;
+      }
+      .overlay__window__quote-link{
+        font-size: 10px;
+      }
+      .overlay__window__img-paragraph{
+        font-size: 8px;
+      }
+      .overlay__window__quote{
+        margin-top: 5px;
+        padding-top: 5px;
+      }
+}

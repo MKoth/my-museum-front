@@ -1,0 +1,28 @@
+<ng-masonry-grid
+    [masonryOptions]="{ transitionDuration: '0.8s', gutter: 5 }" 
+    [useAnimation]="true"
+    [useImagesLoaded]="true"
+    [scrollAnimationOptions]="{ animationEffect: 'no-effect', minDuration : 0.4, maxDuration : 0.7 }"
+    *ngIf="show"
+>
+<ng-masonry-grid-item id="{{'masonry-item-'+i}}-{{id}}"  *ngFor="let item of masonryItems; let i = index;"> 
+    <!--Featured image-->
+    <div class="featured__img-container">
+    <img class="featured__img" [src]="item.url">
+    <!--Overlay window-->
+        <div class="overlay__window">
+            <div class="overlay__window__img-description">
+                <p class="overlay__window__img-paragraph">{{item.creator_name}}</p>
+                <p class="overlay__window__img-paragraph">{{item.pic_name}}</p>
+                <p class="overlay__window__img-paragraph"> {{item.pic_desc}}</p>
+            </div>
+            <div class="overlay__window__quote">
+                <a class="overlay__window__quote-link" routerLink="/product/5">
+                    <span class="overlay__window__quote-link_span">R$ {{item.price}} / quota</span>
+                    <span class="overlay__window__quote-link_span"> > </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-masonry-grid-item>
+</ng-masonry-grid>

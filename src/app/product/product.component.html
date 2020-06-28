@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="back-page">
+    <a class="back-page__link" href=""> < Voltar</a>
+  </div>
+  <product-info-component [id]="1"></product-info-component>
+</div>
+<div class="painter">
+  <div class="container">
+    <div class="painter__header-part">
+      <div class="painter__header-part_empty"></div>
+      <div class="painter__header-part_header">
+        <h5 class="painter__header">Sobre o autor</h5>
+      </div>
+    </div>
+    <div class="painter-information">
+      <div class="painter-information__painter-block_empty"></div>
+      <div class="painter-information__painter-block">
+        <div class="image-holder">
+            <img class="painter-information__image" src="assets/gustav klimt.png">
+            <p class="painter-information__name">Gustavo Klimt</p>
+        </div>
+        <div class="painter-information__info">
+          <p class="painter-information__paragraph">
+            Klimt foi o único aluno da Escola das Artes Decorativas 
+            no século XIX que conseguiu dar início a uma grande carreira 
+            artística, impulsionado pelos seus professores e pelo 
+            diretor do Museu, Rudolf von Eitelberger. Michael Rieser 
+            utilizou seus serviços, bem como o de Franz Matsch (1861-1942) 
+            e do seu irmão Ernst, para os vitrais da “Igreja Votiva” – 
+            o primeiro grande edifício da Ringstraße.[nota 3][3] 
+            Klimt, Ernst e Matsch fundaram a
+            Künstlercompagnie (Companhia dos Artistas), 
+            aproveitando-se do boom da construção. Através da empresa Fellner
+            und Hellmer, especializada na construção de teatros, a Companhia 
+            dos Artistas conseguiu trabalhos.[3]
+          </p>
+          <p class="painter-information__paragraph">
+            Mesmo depois de formados, Klimt, Ernst e Matsch, 
+            continuaram ligados à Escola. Uma carta dos três dirigida 
+            ao diretor do Museu (1884) reforça o desejo de serem 
+            contratados para grandes empreendimentos (demonstração 
+            de que Klimt tentou afirmar-se no mundo da arte historicista), 
+            principalmente na sua cidade natal:
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="another-paintings">
+    <h4 class="another-paintings__header">Mais obras disponíveis de Gustavo Klimt</h4>
+    <div class="another-paintings__holder2">
+      <mansory-blocks-component [order]="2" [blocks]="masonryItems"></mansory-blocks-component>
+    </div> 
+  </div>
+</div>
+
+
+

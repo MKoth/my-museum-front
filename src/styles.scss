@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/fonts/stylesheet.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+  background-color: rgba(255, 255, 255, 1);
+  margin: 0;
+  font-family: "SF Pro Display", Medium, sans-serif;
+  font-size: 16px;
+  color: rgba(82, 88, 98, 1);
+  height: 100%;
+}
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.dialog-quotas-dialog .mat-dialog-container{
+  background:#525862;
+  padding: 25px 35px 45px;
+}
